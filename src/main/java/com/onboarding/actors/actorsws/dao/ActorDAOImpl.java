@@ -29,7 +29,7 @@ public class ActorDAOImpl implements ActorDAO{
     public List<ActorEntity> getActorsByName(String theFullName) {
 
         TypedQuery<ActorEntity> query = entityManager.createQuery(
-                "from ActorEntity where ActorEntity.actorId = :data", ActorEntity.class);
+                "from ActorEntity where fullName = :data", ActorEntity.class);
         query.setParameter("data", theFullName);
 
         List<ActorEntity> actors = query.getResultList();
@@ -56,9 +56,8 @@ public class ActorDAOImpl implements ActorDAO{
 
     @Override
     public ActorEntity updateActor(ActorEntity theActorEntity) {
-        entityManager.merge(theActorEntity);
 
-        return theActorEntity;
+        return entityManager.merge(theActorEntity);
     }
 
     @Override

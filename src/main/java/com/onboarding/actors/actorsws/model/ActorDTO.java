@@ -11,6 +11,10 @@ public class ActorDTO {
 
     private String gender;
 
+    private Integer age;
+
+    private String href;
+
     private String jobTitle;
 
     private Date dateOfBirth;
@@ -25,9 +29,10 @@ public class ActorDTO {
 
     private String biography;
 
+    private String actorImage;
+
     private String imageName;
 
-    private Integer age;
 
     public Integer getActorId() {
         return actorId;
@@ -35,6 +40,14 @@ public class ActorDTO {
 
     public void setActorId(Integer actorId) {
         this.actorId = actorId;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getFullName() {
@@ -45,12 +58,12 @@ public class ActorDTO {
         this.fullName = fullName;
     }
 
-    public String getGender() {
-        return gender;
+    public String getHref() {
+        return href;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setHref(String href) {
+        this.href = href;
     }
 
     public String getJobTitle() {
@@ -107,6 +120,14 @@ public class ActorDTO {
 
     public void setBiography(String biography) {
         this.biography = biography;
+    }
+
+    public String getActorImage() {
+        return actorImage;
+    }
+
+    public void setActorImage(String actorImage) {
+        this.actorImage = actorImage;
     }
 
     public String getImageName() {
