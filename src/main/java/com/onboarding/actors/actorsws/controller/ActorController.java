@@ -63,7 +63,7 @@ public class ActorController {
         }
         logger.info("API response - getActorByName -> " + helper.convertObjectToString(actorDTOList));
 
-        logger.info("Method getGenreByName by genreName " + fullName + " finished! ");
+        logger.info("Method getActorByName by fullName " + fullName + " finished! ");
         return new ResponseEntity<>(actorDTOList, HttpStatus.OK);
     }
 

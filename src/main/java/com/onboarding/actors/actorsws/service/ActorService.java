@@ -129,8 +129,9 @@ public class ActorService {
         ActorDTO returnedActorDTO = mapper.map(actorDAO.getActorById(returnedActorEntity.getActorId()), ActorDTO.class);
         returnedActorDTO.setActorImage(actorDTO.getActorImage());
 
-
-        calculateAge(returnedActorDTO);
+        if(actorDTO.getDateOfBirth() != null) {
+            calculateAge(returnedActorDTO);
+        }
 
         return returnedActorDTO;
     }
